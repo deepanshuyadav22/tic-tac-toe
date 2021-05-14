@@ -1,0 +1,1141 @@
+/* Default style for body tag */
+.bdya
+	{
+		background-color:#fff;
+		transition:all 0.4s;
+	}
+		/* Style for body tag in dark mode */
+		.bdyb
+			{
+				background-color:#2b2b2b;
+				transition:all 0.4s;
+			}
+
+/* Style for name of the game */
+h1
+	{
+		color:#e066ff;
+		background:-webkit-linear-gradient(#da70d6,#00ced1,#4eee94,#dc143c);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-family:lucida grande;
+		text-align:center;
+		text-shadow:2px 2px 20px #ccc;
+	}
+
+/* Default style for gamepad */
+.gamepada
+	{
+		margin:auto;
+		background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+		border-radius:10px;
+		transition:all 0.4s;
+	}
+		/* Style for gamepad in dark mode */
+		.gamepadb
+			{
+				margin:auto;
+				background-color:#575757;
+				border-radius:10px;
+				transition:all 0.4s;
+			}
+
+/* Style for buttons which are in gamepad */
+.btn
+	{
+		margin:10px;
+		background-color:#fff;
+		width:60px;
+		height:60px;
+		border:none;
+		border-radius:10px;
+		outline:none;
+		transition:all 0.4s;
+	}
+
+/* Style for X and O */
+.xo
+	{
+		padding-top:10px;
+		width:100%;
+		height:100%;
+		color:#e066ff;
+		background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-family:candara;
+		font-size:30px;
+		font-weight:bold;
+		animation:xoanm 0.3s 1;
+	}
+	@keyframes xoanm
+		{
+			0%
+				{
+					transform:scale(0);
+				}
+			100%
+				{
+					transform:scale(1);
+				}
+		}
+		@-webkit-keyframes xoanm
+			{
+				0%
+					{
+						transform:scale(0);
+					}
+				100%
+					{
+						transform:scale(1);
+					}
+			}
+			@-moz-keyframes xoanm
+				{
+					0%
+						{
+							transform:scale(0);
+						}
+					100%
+						{
+							transform:scale(1);
+						}
+				}
+				@-o-keyframes xoanm
+					{
+						0%
+							{
+								transform:scale(0);
+							}
+						100%
+							{
+								transform:scale(1);
+							}
+					}
+
+/* Style for turn */
+.turn
+	{
+		color:#e066ff;
+		background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-family:helvetica;
+		font-size:15px;
+		font-weight:bold;
+		text-align:center;
+		border:none;
+		outline:none;
+	}
+
+/* Style for name of players */
+.player
+	{
+		width:40%;
+		color:#e066ff;
+		background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-size:12px;
+		font-family:candara;
+		text-align:center;
+		border:none;
+		outline:none;
+	}
+
+/* Style for scores */
+.score
+	{
+		margin-top:5px;
+		width:40%;
+		color:#e066ff;
+		background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+		-webkit-background-clip:text;
+		-webkit-text-fill-color:transparent;
+		font-size:15px;
+		font-weight:bold;
+		text-align:center;
+		border:none;
+		outline:none;
+	}
+
+/* Style for winner/tied window */
+.winner
+	{
+		position:fixed;
+		top:40%;
+		left:0;
+		width:250px;
+		height:90px;
+		background-color:#fff;
+		font-family:candara;
+		font-size:30px;
+		font-weight:bold;
+		z-index:4;
+		overflow:hidden;
+		border-top-right-radius:10px;
+		border-bottom-right-radius:10px;
+		box-shadow:0 0 40px #fff;
+		animation:win_anm 0.6s 1;
+	}
+	/* Style for texts which are in WINNER class */
+	.win
+		{
+			margin:0;
+			padding:25px;
+			color:#e066ff;
+			background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+			text-align:center;
+			overflow:hidden;
+		}
+	@keyframes win_anm
+		{
+			0%
+				{
+					width:0;
+					font-size:0;
+					border-top-right-radius:0;
+					border-bottom-right-radius:0;
+				}
+			60%
+				{
+					font-size:0;
+				}
+			100%
+				{
+					width:250px;
+					font-size:30px;
+					border-top-right-radius:10px;
+					border-bottom-right-radius:10px;
+				}
+		}
+		@-webkit-keyframes win_anm
+			{
+				0%
+					{
+						width:0;
+						font-size:0;
+						border-top-right-radius:0;
+						border-bottom-right-radius:0;
+					}
+				60%
+					{
+						font-size:0;
+					}
+				100%
+					{
+						width:250px;
+						font-size:30px;
+						border-top-right-radius:10px;
+						border-bottom-right-radius:10px;
+					}
+			}
+			@-moz-keyframes win_anm
+				{
+					0%
+						{
+							width:0;
+							font-size:0;
+							border-top-right-radius:0;
+							border-bottom-right-radius:0;
+						}
+					60%
+						{
+							font-size:0;
+						}
+					100%
+						{
+							width:250px;
+							font-size:30px;
+							border-top-right-radius:10px;
+							border-bottom-right-radius:10px;
+						}
+				}
+				@-o-keyframes win_anm
+				{
+					0%
+						{
+						width:0;
+						font-size:0;
+						border-top-right-radius:0;
+						border-bottom-right-radius:0;
+						}
+					60%
+						{
+						font-size:0;
+						}
+					100%
+						{
+						width:250px;
+						font-size:30px;
+						border-top-right-radius:10px;
+						border-bottom-right-radius:10px;
+						}
+				}
+/* Outer style for Replay and Restart buttons which will display when a player will won the game OR when game ties */
+.winbtn
+	{
+		padding:15px;
+		position:fixed;
+		top:65%;
+		right:0;
+		width:210px;
+		height:50px;
+		background-color:#fff;
+		font-family:candara;
+		font-size:30px;
+		font-weight:bold;
+		z-index:4;
+		overflow:hidden;
+		border-top-left-radius:10px;
+		border-bottom-left-radius:10px;
+		box-shadow:0 0 40px #fff;
+		animation:winbtn_anm 0.6s 1;
+	}
+	/* Style for Replay and Restart buttons which will display when a player will won the game OR when game ties */
+	.winbtn_r
+		{
+			padding:15px;
+			color:#e066ff;
+			background:-webkit-linear-gradient(#da70d6,#00ced1,#dc143c);
+			-webkit-background-clip:text;
+			-webkit-text-fill-color:transparent;
+			font-family:arial;
+			font-size:16px;
+			font-weight:bold;
+			border:none;
+			border-radius:20px;
+			box-shadow:0 0 20px #ccc;
+			outline:none;
+			transition:all 0.4s;
+			animation:winbtn_r_anm 0.6s 1;
+		}
+		.winbtn_r:active
+			{
+				box-shadow:0 0 5px #ccc;
+			}
+		@keyframes winbtn_anm
+			{
+				0%
+					{
+						transform:scale(0);
+					}
+				100%
+					{
+						transform:scale(1);
+					}
+			}
+			@-webkit-keyframes winbtn_anm
+				{
+					0%
+						{
+							transform:scale(0);
+						}
+					100%
+						{
+							transform:scale(1);
+						}
+				}
+				@-moz-keyframes winbtn_anm
+					{
+						0%
+							{
+								transform:scale(0);
+							}
+						100%
+							{
+								transform:scale(1);
+							}
+					}
+					@-o-keyframes winbtn_anm
+						{
+							0%
+								{
+									transform:scale(0);
+								}
+							100%
+								{
+									transform:scale(1);
+								}
+						}
+		@keyframes winbtn_r_anm
+			{
+				0%
+					{
+						transform:scale(0);
+					}
+				60%
+					{
+						transform:scale(0);
+					}
+				100%
+					{
+						transform:scale(1);
+					}
+			}
+			@-webkit-keyframes winbtn_r_anm
+				{
+					0%
+						{
+							transform:scale(0);
+						}
+					60%
+						{
+							transform:scale(0);
+						}
+					100%
+						{
+							transform:scale(1);
+						}
+				}
+				@-moz-keyframes winbtn_r_anm
+					{
+						0%
+							{
+								transform:scale(0);
+							}
+						60%
+							{
+								transform:scale(0);
+							}
+						100%
+							{
+								transform:scale(1);
+							}
+					}
+					@-o-keyframes winbtn_r_anm
+						{
+							0%
+								{
+									transform:scale(0);
+								}
+							60%
+								{
+									transform:scale(0);
+								}
+							100%
+								{
+									transform:scale(1);
+								}
+						}
+/* Style of the background which will visible when a player will won the game OR when game ties */
+.go
+	{
+		position:fixed;
+		bottom:0;
+		right:0;
+		width:100%;
+		height:100%;
+		background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+		z-index:3;
+		border:none;
+		opacity:50%;
+		border-top-left-radius:0;
+		animation:go_anm 0.2s linear 1;
+	}
+	@keyframes go_anm
+		{
+			0%
+				{
+					width:0;
+					height:0;
+					opacity:0;
+					border-top-left-radius:0;
+				}
+			50%
+				{
+					border-top-left-radius:50%;
+				}
+			100%
+				{
+					width:100%;
+					height:100%;
+					opacity:50%;
+					border-top-left-radius:0;
+				}
+		}
+		@-webkit-keyframes go_anm
+			{
+				0%
+					{
+						width:0;
+						height:0;
+						opacity:0;
+						border-top-left-radius:0;
+					}
+				50%
+					{
+						border-top-left-radius:50%;
+					}
+				100%
+					{
+						width:100%;
+						height:100%;
+						opacity:50%;
+						border-top-left-radius:0;
+					}
+			}
+			@-moz-keyframes go_anm
+				{
+					0%
+						{
+							width:0;
+							height:0;
+							opacity:0;
+							border-top-left-radius:0;
+						}
+					50%
+						{
+							border-top-left-radius:50%;
+						}
+					100%
+						{
+							width:100%;
+							height:100%;
+							opacity:50%;
+							border-top-left-radius:0;
+						}
+				}
+				@-o-keyframes go_anm
+					{
+						0%
+							{
+								width:0;
+								height:0;
+								opacity:0;
+								border-top-left-radius:0;
+							}
+						50%
+							{
+								border-top-left-radius:50%;
+							}
+						100%
+							{
+								width:100%;
+								height:100%;
+								opacity:50%;
+								border-top-left-radius:0;
+							}
+					}
+
+/* Style of botoom bar which contains Menu, Replay and Restart buttons */
+.footer
+	{
+		position:fixed;
+		bottom:0;
+		left:0;
+		right:0;
+		padding:30px;
+	}
+
+/* Outer style for menu bars */
+.opt
+	{
+		background-color:#fff;
+		outline:none;
+		border:none;
+		transition:all 0.4s;
+	}
+	/* Style for menu bars */
+	.menu_bars
+		{
+			display:inline-block;
+			cursor:pointer;
+		}
+		/* Style for each menu bar */
+		.bar1, .bar2, .bar3
+			{
+				margin:6px 0;
+				width:35px;
+				height:5px;
+				background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+				border-radius:50%;
+				transition:all 0.4s;
+			}
+			.change .bar1
+				{
+					transform:rotate(-45deg) translate(-9px,6px);
+					-webkit-transform:rotate(-45deg) translate(-9px,6px);
+					-moz-transform:rotate(-45deg) translate(-9px,6px);
+				}
+			.change .bar2
+				{
+					opacity:0;
+				}
+			.change .bar3
+				{
+					transform:rotate(45deg) translate(-8px,-8px);
+					-webkit-transform:rotate(45deg) translate(-8px,-8px);
+					-moz-transform:rotate(45deg) translate(-8px,-8px);
+					
+				}
+/* Default style of Replay and Restart buttons which are positioned at bottom right */
+.ra
+	{
+		padding:15px;
+		color:#e066ff;
+		background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+		font-family:arial;
+		font-size:16px;
+		font-weight:bold;
+		border:none;
+		border-radius:20px;
+		box-shadow:0 0 20px #ccc;
+		outline:none;
+		transition:all 0.4s;
+	}
+	.ra:active
+		{
+			box-shadow:0 0 5px #ccc;
+		}
+		/* Style of Replay and Restart buttons which are positioned at bottom right in dark mode */
+		.rb
+			{
+				padding:15px;
+				color:#e066ff;
+				background-color:#8a8a8a;
+				font-family:arial;
+				font-size:16px;
+				font-weight:bold;
+				border:none;
+				border-radius:20px;
+				box-shadow:0 0 20px #fff;
+				outline:none;
+				transition:all 0.4s;
+			}
+			.rb:active
+				{
+					box-shadow:0 0 5px #fff;
+				}
+
+/* Outer style of menu */
+.menu
+	{
+		padding:10px;
+		background-color:#fff;
+		width:50px;
+		height:180px;
+		font-size:15px;
+		z-index:1;
+		position:fixed;
+		bottom:93px;
+		left:21px;
+		outline:none;
+		overflow:hidden;
+		border-radius:10px;
+		transition:all 0.4s;
+	}
+	/* Default style for options of menu */
+	.menu_aa
+		{
+			display:block;
+			padding-top:15px;
+			width:50px;
+			height:35px;
+			color:#e066ff;
+			background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+			font-family:verdana;
+			font-size:15px;
+			text-decoration:none;
+			text-align:center;
+			border-radius:50%;
+			box-shadow:0 0 15px #ccc;
+			transition:all 0.4s;
+			animation:menu_anm 0.4s 1;
+		}
+		.menu_aa:hover
+			{
+				cursor:pointer;
+				box-shadow:0 0 5px #ccc;
+			}
+				/* Style for options of menu in dark mode */
+				.menu_ab
+					{
+						display:block;
+						padding-top:15px;
+						width:50px;
+						height:35px;
+						color:#e066ff;
+						background-color:#8a8a8a;
+						font-family:verdana;
+						font-size:15px;
+						text-decoration:none;
+						text-align:center;
+						border-radius:50%;
+						box-shadow:0 0 15px #fff;
+						transition:all 0.4s;
+						animation:menu_anm 0.4s 1;
+					}
+					.menu_ab:hover
+						{
+							cursor:pointer;
+							box-shadow:0 0 5px #fff;
+						}
+		@keyframes menu_anm
+			{
+				0%
+					{
+						transform:scale(0);
+					}
+				100%
+					{
+						transform:scale(1);
+					}
+			}
+			@-webkit-keyframes menu_anm
+				{
+					0%
+						{
+							transform:scale(0);
+						}
+					100%
+						{
+							transform:scale(1);
+						}
+				}
+				@-moz-keyframes menu_anm
+					{
+						0%
+							{
+								transform:scale(0);
+							}
+						100%
+							{
+								transform:scale(1);
+							}
+					}
+					@-o-keyframes menu_anm
+						{
+							0%
+								{
+									transform:scale(0);
+								}
+							100%
+								{
+									transform:scale(1);
+								}
+						}
+
+/* Default style for help window */
+.helpa
+	{
+		padding:15px;
+		position:fixed;
+		top:0;
+		left:0;
+		right:0;
+		height:50%;
+		color:#e066ff;
+		background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+		font-family:arial;
+		text-align:justify;
+		z-index:2;
+		border:none;
+		opacity:86%;
+		overflow:auto;
+		box-shadow:0 0 25px #ccc;
+		animation:help_anm 0.7s 1;
+	}
+	.helpa b
+		{
+			color:#ba55d3;
+			font-family:candara;
+		}
+	.helpa button
+		{
+			padding:10px;
+			position:fixed;
+			bottom:47%;
+			right:3%;
+			color:#e066ff;
+			background-color:#fff;
+			font-family:helvetica;
+			font-size:15px;
+			font-weight:bold;
+			z-index:3;
+			outline:none;
+			cursor:pointer;
+			border:none;
+			border-radius:25%;
+			animation:hb_anm 1s 1;
+		}
+		/* Style for help window in dark mode */
+		.helpb
+			{
+				padding:15px;
+				position:fixed;
+				top:0;
+				left:0;
+				right:0;
+				height:50%;
+				color:#fff;
+				background-color:#999999;
+				font-family:arial;
+				text-align:justify;
+				z-index:2;
+				border:none;
+				opacity:86%;
+				overflow:auto;
+				box-shadow:0 0 25px #ccc;
+				animation:help_anm 0.7s 1;
+			}
+			.helpb b
+				{
+					color:#5e5e5e;
+					font-family:candara;
+				}
+			.helpb button
+				{
+					padding:10px;
+					position:fixed;
+					bottom:47%;
+					right:3%;
+					color:#e066ff;
+					background-color:#fff;
+					font-family:helvetica;
+					font-size:15px;
+					font-weight:bold;
+					z-index:3;
+					outline:none;
+					cursor:pointer;
+					border:none;
+					border-radius:25%;
+					animation:hb_anm 1s 1;
+				}
+	@keyframes help_anm
+		{
+			0%
+				{
+					height:0;
+				}
+			100%
+				{
+					height:50%;
+				}
+		}
+		@-webkit-keyframes help_anm
+			{
+				0%
+					{
+						height:0;
+					}
+				100%
+					{
+						height:50%;
+					}
+			}
+			@-moz-keyframes help_anm
+				{
+					0%
+						{
+							height:0;
+						}
+					100%
+						{
+							height:50%;
+						}
+				}
+				@-o-keyframes help_anm
+					{
+						0%
+							{
+								height:0;
+							}
+						100%
+							{
+								height:50%;
+							}
+					}
+			.help::scrollbar
+				{
+					height:0;
+					width:3px;
+				}
+			.help::scrollbar-track
+				{
+					opacity:0%;
+				}
+			.help::scrollbar-thumb
+				{
+					background:linear-gradient(#da70d6,#00ced1,#dc143c);
+					outline:none;
+				}
+				.help::-webkit-scrollbar
+					{
+						height:0;
+						width:3px;
+					}
+				.help::-webkit-scrollbar-track
+					{
+						opacity:0%;
+					}
+				.help::-webkit-scrollbar-thumb
+					{
+						background:linear-gradient(#da70d6,#00ced1,#dc143c);
+						outline:none;
+					}
+					.help::-moz-scrollbar
+						{
+							height:0;
+							width:3px;
+						}
+					.help::-moz-scrollbar-track
+						{
+							opacity:0%;
+						}
+					.help::-moz-scrollbar-thumb
+						{
+							background:linear-gradient(#da70d6,#00ced1,#dc143c);
+							outline:none;
+						}
+						.help::-o-scrollbar
+							{
+								height:0;
+								width:3px;
+							}
+						.help::-o-scrollbar-track
+							{
+								opacity:0%;
+							}
+						.help::-o-scrollbar-thumb
+							{
+								background:linear-gradient(#da70d6,#00ced1,#dc143c);
+								outline:none;
+							}
+		@keyframes hb_anm
+			{
+				0%
+					{
+						transform:scale(0);
+					}
+				60%
+					{
+						transform:scale(0);
+					}
+				100%
+					{
+						transform:scale(1);
+					}
+			}
+			@-webkit-keyframes hb_anm
+				{
+					0%
+						{
+							transform:scale(0);
+						}
+					60%
+						{
+							transform:scale(0);
+						}
+					100%
+						{
+							transform:scale(1);
+						}
+				}
+				@-moz-keyframes hb_anm
+					{
+						0%
+							{
+								transform:scale(0);
+							}
+						60%
+							{
+								transform:scale(0);
+							}
+						100%
+							{
+								transform:scale(1);
+							}
+					}
+					@-o-keyframes hb_anm
+						{
+							0%
+								{
+									transform:scale(0);
+								}
+							60%
+								{
+									transform:scale(0);
+								}
+							100%
+								{
+									transform:scale(1);
+								}
+						}
+
+/* Style for background which will display when user will click on Restart button */
+.rst
+	{
+		position:fixed;
+		bottom:0;
+		right:0;
+		width:0;
+		height:0;
+		background:linear-gradient(to bottom right,#bbffff,#c1ffc1,#ffe1ff,#ffb6c1);
+		z-index:3;
+		border:none;
+		border-top-left-radius:50%;
+		animation:rst_anm 0.6s linear 1;
+	}
+	@keyframes rst_anm
+		{
+			0%
+				{
+					width:0;
+					height:0;
+					opacity:0;
+					border-top-left-radius:0;
+				}
+			20%
+				{
+					border-top-left-radius:50%;
+				}
+			50%
+				{
+					width:100%;
+					height:100%;
+					opacity:50%;
+					border-top-left-radius:0;
+				}
+			70%
+				{
+					border-top-left-radius:50%;
+				}
+			100%
+				{
+					width:0;
+					height:0;
+					opacity:0;
+					border-top-left-radius:0;
+				}
+		}
+		@-webkit-keyframes rst_anm
+			{
+				0%
+					{
+						width:0;
+						height:0;
+						opacity:0;
+						border-top-left-radius:0;
+					}
+				20%
+					{
+						border-top-left-radius:50%;
+					}
+				50%
+					{
+						width:100%;
+						height:100%;
+						opacity:50%;
+						border-top-left-radius:0;
+					}
+				70%
+					{
+						border-top-left-radius:50%;
+					}
+				100%
+					{
+						width:0;
+						height:0;
+						opacity:0;
+						border-top-left-radius:0;
+					}
+			}
+			@-moz-keyframes rst_anm
+				{
+					0%
+						{
+							width:0;
+							height:0;
+							opacity:0;
+							border-top-left-radius:0;
+						}
+					20%
+						{
+							border-top-left-radius:50%;
+						}
+					50%
+						{
+							width:100%;
+							height:100%;
+							opacity:50%;
+							border-top-left-radius:0;
+						}
+					70%
+						{
+							border-top-left-radius:50%;
+						}
+					100%
+						{
+							width:0;
+							height:0;
+							opacity:0;
+							border-top-left-radius:0;
+						}
+				}
+				@-o-keyframes rst_anm
+					{
+						0%
+							{
+								width:0;
+								height:0;
+								opacity:0;
+								border-top-left-radius:0;
+							}
+						20%
+							{
+								border-top-left-radius:50%;
+							}
+						50%
+							{
+								width:100%;
+								height:100%;
+								opacity:50%;
+								border-top-left-radius:0;
+							}
+						70%
+							{
+								border-top-left-radius:50%;
+							}
+						100%
+							{
+								width:0;
+								height:0;
+								opacity:0;
+								border-top-left-radius:0;
+							}
+					}
+					@-ms-keyframes rst_anm
+						{
+							0%
+								{
+									width:0;
+									height:0;
+									opacity:0;
+									border-top-left-radius:0;
+								}
+							20%
+								{
+									border-top-left-radius:50%;
+								}
+							50%
+								{
+									width:100%;
+									height:100%;
+									opacity:50%;
+									border-top-left-radius:0;
+								}
+							70%
+								{
+									border-top-left-radius:50%;
+								}
+							100%
+								{
+									width:0;
+									height:0;
+									opacity:0;
+									border-top-left-radius:0;
+								}
+						}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tic Tac Toe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="Tic Tac Toe.css"/>
+	<link rel="stylesheet" href="Icons\css\all.css"/>
+	<script src="Tic Tac Toe.js"></script>
+</head>
+
+<body class="bdy bdya" onload="set()">
+
+<h1>Tic Tac Toe</h1>
+
+<br>
+
+<!-- Starting of gamepad -->
+<table class="gamepad gamepada" cellspacing="0">
+	<tr>
+		<td>
+			<button class="btn" onclick="ttt(0)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(1)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(2)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button class="btn" onclick="ttt(3)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(4)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(5)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<button class="btn" onclick="ttt(6)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(7)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+		<td>
+			<button class="btn" onclick="ttt(8)">
+				<big class="xo" style="display:none;">X</big>
+				<big class="xo" style="display:none;">O</big>
+			</button>
+		</td>
+	</tr>
+</table>
+<!-- End of gamepad -->
+
+<br>
+<center>
+	<!-- Displaying turn of players -->
+	<input type="text" id="turn" class="turn" readonly="readonly">
+</center>
+
+<br>
+<center>
+	<!-- Displaying names of players -->
+	<input type="text" id="p1" class="player" placeholder="Enter 1st player name" maxlength="15">
+		&nbsp;
+	<input type="text" id="p2" class="player" placeholder="Enter 2nd player name" maxlength="15">
+</center>
+
+<center>
+	<!-- Displaying scores of players -->
+	<input type="text" id="s1" class="score" maxlength="10" readonly="readonly">
+		&nbsp;
+	<input type="text" id="s2" class="score" maxlength="10" readonly="readonly">
+</center>
+
+<div id="winner" class="winner" style="display:none;">
+	<!-- One of from below three div tags is visible when a player won the game OR when game ties -->
+	<div id="winx" class="win" style="display:none;">Winner is X</div>
+	<div id="wino" class="win" style="display:none;">Winner is O</div>
+	<div id="tie" class="win" style="display:none;">Game Tied</div>
+</div>
+<div id="winbtn" class="winbtn" style="display:none;">
+	<!-- Below, Replay and Restart buttons are visible when a player won the game OR when game ties -->
+	<button class="winbtn_r" onclick="replay()">Replay</button>
+		&nbsp;&nbsp;&nbsp;&nbsp;
+	<button class="winbtn_r" onclick="restart()">Restart</button>
+</div>
+<!-- Background in gradient form will visible when a player won the game OR when game ties -->
+<div id="go" class="go" style="display:none;"></div>
+
+<!-- Bottom bar with Menu, Replay and Restart buttons with fixed positions -->
+<table class="footer" width="100%">
+	<tr>
+		<td align="left">
+			<button class="opt" onclick="menu()">
+				<div id="menu_bars" class="menu_bars" onclick="menu_button(this)">
+					<!-- Three bars working as menu button -->
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+			</button>
+		</td>
+		<td align="right">
+			<!-- Replay button -->
+			<button class="r ra" onclick="replay()">Replay</button>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- Restart button -->
+			<button class="r ra" onclick="restart()">Restart</button>
+		</td>
+	</tr>
+</table>
+
+<!-- What is in menu, see below : -->
+<div id="menu" class="menu" style="display:none;">
+	<a class="menu_a menu_aa" onclick="mode()" style="font-size:9px;">
+		<!-- Two modes : Dark and Light. By default mode : Light -->
+		<b id="dm">Dark<br>Mode</b>
+		<b id="lm" style="display:none;">Light<br>Mode</b>
+	</a>
+		<br>
+	<a class="menu_a menu_aa" onclick="sound()">
+		<!-- Sound control : muted OR unmuted. By default : unmuted -->
+		<b id="vol_up" class="fas fa-volume-up" style="display:block;"></b>
+		<b id="vol_mute" class="fas fa-volume-mute" style="display:none;"></b>
+	</a>
+		<br>
+	<!-- Help window -->
+	<a class="menu_a menu_aa" id="hlp" onclick="help()"><b>?</b></a>
+</div>
+	<!-- What is in help, see below : -->
+	<div id="help" class="help helpa" style="display:none;">
+		<b>Rules of the Game :</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;1. The game is played on a grid that's three squares by three squares.<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;2. If one player is <i>X</i>, then second player is <i>O</i>. Players take turns putting their marks in empty squares.<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;3. The first player to get three of his/her marks in a row (up, down, across OR diagonally) is the winner.<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;4. When all nine squares are full, the game is over. If no player has three marks in a row, the game ends in a tie.
+			<br><br>
+		<b>When to use <i>Replay</i> button :</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;If the game is won by a player OR if the game is tied OR if you want to replay the game while playing without clearing scores (i.e. without setting scores to zero), then you have to click the <i>Replay</i> button.
+			<br><br>
+		<b>When to use <i>Restart</i> button :</b><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;If the game is won by a player OR if the game is tied OR if you want to restart the game while playing with clearing scores (i.e. setting scores to zero), then you have to click the <i>Restart</i> button.
+			<br><br><br><br>	
+		<!-- Close button for help window -->
+		<center><button onclick="help()">Close</button></center>
+	</div>
+
+<!-- An animated div element will animated when user will click on Restart button -->
+<div id="rst" class="rst" style="display:none;"></div>
+
+</body>
+</html>
