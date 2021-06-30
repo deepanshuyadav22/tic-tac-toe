@@ -7,4 +7,4 @@ A web-browser
 
 ### How to run it?
 1. Download above files in same directory.
-2. After downloading, open **Tic Tac Toe.html** in a web-browser.
+2. After downloading, open **index.html** in a web-browser.
